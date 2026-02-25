@@ -102,11 +102,12 @@ nav a:hover {
 }
 
 .left-card img {
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
+    width: 140px;           /* or 120px for smaller */
+    height: 140px;          /* keep it square */
+    border-radius: 50%;     
+    object-fit: cover;      /* ensures the full head is visible, scales properly */
+    object-position: top;   /* align top of the image inside the square */
     margin-bottom: 25px;
-    object-fit: cover;
 }
 
 /* Developer-style name */
