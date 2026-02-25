@@ -1,0 +1,350 @@
+/* ============================= */
+/*        GLOBAL STYLES          */
+/* ============================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0d1117;
+    color: #c9d1d9;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Subtle grid */
+body::before {
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(#161b22 1px, transparent 1px),
+                      linear-gradient(to right, #161b22 1px, transparent 1px);
+    background-size: 40px 40px;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+/* ============================= */
+/*           NAVBAR              */
+/* ============================= */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 80px;
+    position: fixed;
+    width: 100%;
+    background: rgba(13,17,23,0.85);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid #21262d;
+    z-index: 1000;
+}
+
+.logo {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 16px;
+    color: #58a6ff;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 35px;
+}
+
+nav a {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
+    text-decoration: none;
+    color: #8b949e;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #58a6ff;
+}
+
+/* ============================= */
+/*            HERO               */
+/* ============================= */
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 140px 100px 80px 100px;
+    gap: 100px;
+}
+
+/* ============================= */
+/*        LEFT PROFILE CARD      */
+/* ============================= */
+
+.left-card {
+    width: 340px;
+    padding: 50px 40px;
+    border-radius: 12px;
+    background: #161b22;
+    border: 1px solid #30363d;
+    text-align: center;
+    box-shadow: 0 0 0 transparent;
+    transition: 0.3s ease;
+}
+
+.left-card:hover {
+    border-color: #58a6ff;
+}
+
+.left-card img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    margin-bottom: 25px;
+    object-fit: cover;
+}
+
+/* Developer-style name */
+.left-card h2 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 18px;
+    color: #58a6ff;
+    margin-bottom: 10px;
+}
+
+.role {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
+    color: #8b949e;
+    margin-bottom: 15px;
+}
+
+/* ============================= */
+/*        COMPANY SECTION        */
+/* ============================= */
+
+.company-section {
+    margin: 20px 0;
+}
+
+.company-logo {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+.company-name {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    color: #6e7681;
+}
+
+/* ============================= */
+/*          SOCIAL LINKS         */
+/* ============================= */
+
+.socials {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.socials a {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    text-decoration: none;
+    color: #8b949e;
+    transition: 0.3s;
+}
+
+.socials a:hover {
+    color: #58a6ff;
+}
+
+/* ============================= */
+/*        RIGHT CONTENT          */
+/* ============================= */
+
+.right-content {
+    max-width: 650px;
+}
+
+.right-content h1 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 40px;
+    margin-bottom: 25px;
+    color: #58a6ff;
+}
+
+.right-content p {
+    line-height: 1.8;
+    margin-bottom: 18px;
+    color: #c9d1d9;
+}
+
+/* ============================= */
+/*          SECTIONS             */
+/* ============================= */
+
+.section {
+    padding: 120px 100px;
+    text-align: center;
+    border-top: 1px solid #21262d;
+}
+
+.section h2 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 28px;
+    color: #58a6ff;
+    margin-bottom: 20px;
+}
+
+.section p {
+    max-width: 700px;
+    margin: auto;
+    line-height: 1.7;
+    color: #8b949e;
+}
+
+/* ============================= */
+/*        SCROLL REVEAL          */
+/* ============================= */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 0.7s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ============================= */
+/*        RESPONSIVE             */
+/* ============================= */
+
+@media (max-width: 1000px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 60px;
+    }
+
+    nav {
+        padding: 20px 40px;
+    }
+
+    .section {
+        padding: 80px 40px;
+    }
+}
+
+
+.github-metrics {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.github-metrics img {
+    max-width: 420px;
+    border-radius: 12px;
+    border: 1px solid #30363d;
+}
+
+
+/* Right Contact Section */
+.right-content h1 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 40px;
+    color: #58a6ff;
+    margin-bottom: 20px;
+}
+
+.right-content p {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 16px;
+    color: #c9d1d9;
+}
+
+.right-content a {
+    color: #58a6ff;
+    text-decoration: none;
+}
+
+.right-content a:hover {
+    text-decoration: underline;
+}
+
+
+/* CV iframe styling */
+.right-content iframe {
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    background-color: #161b22;
+}
+.right-content a {
+    font-family: 'JetBrains Mono', monospace;
+    color: #58a6ff;
+    text-decoration: none;
+}
+.right-content a:hover {
+    text-decoration: underline;
+}
+
+
+/* HERO / MAIN SECTION */
+.hero {
+    display: flex;
+    align-items: flex-start; /* Align top of PDF with card */
+    justify-content: flex-start;
+    min-height: 100vh;
+    padding: 140px 80px 80px 80px;
+    gap: 60px;
+}
+
+/* LEFT CARD width */
+.left-card {
+    width: 280px; /* slightly smaller */
+    flex-shrink: 0; /* never shrink */
+}
+
+/* RIGHT CONTENT width */
+.right-content {
+    flex: 1; /* takes all remaining space */
+    max-width: 900px; /* optional limit */
+}
+
+
+/* Ensure bullet lists match paragraph font and style */
+.right-content ul {
+    padding-left: 20px;
+    margin: 15px 0;
+    list-style-type: disc;
+    line-height: 1.7;
+    font-family: 'Inter', sans-serif; /* Match paragraph font */
+    font-size: 16px;                   /* Match paragraph size */
+    color: #c9d1d9;                    /* Match paragraph color */
+}
+
+.right-content ul li {
+    margin-bottom: 10px;
+    font-family: inherit;  /* inherit from ul */
+    font-size: inherit;    /* inherit size */
+    font-weight: 400;      /* normal weight to match paragraphs */
+    color: inherit;        /* inherit color */
+}
+
+/* Optional: subtle glowing bullets */
+.right-content ul li::marker {
+    color: #58a6ff;  /* developer accent color */
+    font-size: 18px;
+}
