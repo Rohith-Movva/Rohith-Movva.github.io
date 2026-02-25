@@ -354,12 +354,12 @@ nav a:hover {
 }
 
 .projects-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
     gap: 30px;
+    justify-content: center;
     margin-top: 30px;
 }
-
 
 .project-card {
     background-color: #161b22;
@@ -400,9 +400,10 @@ nav a:hover {
 }
 
 .projects-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
+    display: flex;
+    flex-wrap: wrap;         /* allows wrapping if screen is small */
+    gap: 30px;               /* space between tiles */
+    justify-content: flex-start; /* align left */
     margin-top: 30px;
 }
 
@@ -442,60 +443,4 @@ nav a:hover {
 
 .project-card a:hover {
     text-decoration: underline;
-}
-
-
-/* ===============================
-   GLOBAL LAYOUT CONTROL
-================================= */
-
-.main-container {
-    max-width: 1200px;     /* Prevent stretching on big monitors */
-    margin: 0 auto;        /* Center everything */
-    padding: 40px 20px;    /* Side spacing */
-}
-
-/* ===============================
-   HERO RESPONSIVENESS
-================================= */
-
-.hero {
-    display: flex;
-    gap: 50px;
-    align-items: flex-start;
-}
-
-/* Tablet */
-@media (max-width: 1024px) {
-    .hero {
-        gap: 30px;
-    }
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-    .hero {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .left-card {
-        width: 100%;
-        max-width: 350px;
-    }
-
-    .right-content {
-        width: 100%;
-    }
-}
-
-/* Small Mobile */
-@media (max-width: 480px) {
-    .main-container {
-        padding: 30px 15px;
-    }
-
-    .hero {
-        gap: 20px;
-    }
 }
