@@ -542,3 +542,32 @@ nav a:hover {
         height: auto;
     }
 }
+/* ============================= */
+/* MOBILE RESPONSIVENESS   */
+/* ============================= */
+
+@media (max-width: 768px) {
+    /* Hide the PDF iframe entirely on ALL mobile screens */
+    .right-content iframe {
+        display: none;
+    }
+
+    /* Make the download button look like a nice big mobile button */
+    .right-content a[download] {
+        display: inline-block;
+        background-color: #58a6ff;
+        color: #0d1117;
+        padding: 12px 24px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        margin-top: 20px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .right-content a[download]:hover {
+        background-color: #318bf0;
+        text-decoration: none;
+    }
+}
