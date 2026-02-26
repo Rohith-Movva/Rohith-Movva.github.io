@@ -446,3 +446,99 @@ nav a:hover {
 .project-card a:hover {
     text-decoration: underline;
 }
+
+/* ============================= */
+/* MOBILE RESPONSIVENESS   */
+/* ============================= */
+
+/* Hide hamburger menu on laptops */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: #58a6ff;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    /* Navbar Mobile Adjustments */
+    nav {
+        padding: 15px 25px;
+        justify-content: space-between;
+    }
+
+    /* Show the hamburger menu */
+    .menu-toggle {
+        display: block; 
+    }
+
+    /* Hide nav links off-screen by default */
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        right: -100%; 
+        flex-direction: column;
+        background: rgba(13,17,23,0.98);
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+        transition: 0.4s ease-in-out;
+        border-bottom: 1px solid #21262d;
+    }
+
+    /* Class added by JS to slide the menu in */
+    .nav-links.active {
+        right: 0; 
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+    /* Hero Section Mobile Adjustments */
+    .hero {
+        padding: 100px 20px 40px 20px; /* Reduce large side padding */
+        gap: 40px;
+    }
+
+    /* Left Profile Card */
+    .left-card {
+        width: 100%;
+        max-width: 320px;
+        padding: 30px 20px;
+        margin: 0 auto;
+    }
+
+    /* Typography Scaling */
+    .right-content h1 {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .right-content p {
+        font-size: 15px;
+        text-align: left; /* Justify is often hard to read on mobile */
+    }
+
+    /* CV iframe Mobile Fix */
+    .right-content iframe {
+        height: 500px; /* Reduce height so it fits mobile screens */
+    }
+
+    /* General Section Padding */
+    .section {
+        padding: 60px 20px;
+    }
+
+    /* Project Cards Mobile Fix */
+    .project-card {
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+
+    /* GitHub Image fix to stop it overflowing */
+    .github-metrics img {
+        width: 100%;
+        height: auto;
+    }
+}
