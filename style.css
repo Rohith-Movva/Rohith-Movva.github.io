@@ -34,7 +34,8 @@ body::before {
 
 nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: 40px;
     align-items: center;
     padding: 22px 80px;
     position: fixed;
